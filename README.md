@@ -1,8 +1,8 @@
-# DeployQuest 🚀
+# SpawnCtl 🚀
 
 > A Self-Service Game Server Hosting Platform for Minecraft & Terraria.
 
-**DeployQuest** is a lightweight, multi-tenant game server management panel built specifically for single-host deployments. It allows users to instantly spin up game servers (Minecraft or Terraria) on demand, exposes them securely to the public internet without port-forwarding using Playit.gg, and automatically shuts them down when idle to conserve system resources.
+**SpawnCtl** is a lightweight, multi-tenant game server management panel built specifically for single-host deployments. It allows users to instantly spin up game servers (Minecraft or Terraria) on demand, exposes them securely to the public internet without port-forwarding using Playit.gg, and automatically shuts them down when idle to conserve system resources.
 
 ---
 
@@ -16,13 +16,13 @@
 - Streams live console logs straight to the web browser via WebSockets.
 
 **Why it was built:**
-Running dedicated game servers 24/7 consumes significant resources, but friends usually only play for a few hours a day. Existing panels (like Pterodactyl) are powerful but extremely heavy and complex to set up. DeployQuest was built to be a simple, "Self-Service" alternative—anyone can click a button, get a server instantly, play, and the system cleans up after them when they leave.
+Running dedicated game servers 24/7 consumes significant resources, but friends usually only play for a few hours a day. Existing panels (like Pterodactyl) are powerful but extremely heavy and complex to set up. SpawnCtl was built to be a simple, "Self-Service" alternative—anyone can click a button, get a server instantly, play, and the system cleans up after them when they leave.
 
 ---
 
 ## 🏗️ Architecture
 
-DeployQuest uses a decoupled Architecture consisting of a Next.js Frontend and a Fastify Backend, connected to a local Docker Daemon and Supabase for state management.
+SpawnCtl uses a decoupled Architecture consisting of a Next.js Frontend and a Fastify Backend, connected to a local Docker Daemon and Supabase for state management.
 
 ```mermaid
 graph TD
@@ -136,8 +136,8 @@ graph TD
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/yourusername/deployquest.git
-cd deployquest
+git clone https://github.com/yourusername/SpawnCtl.git
+cd SpawnCtl
 pnpm install
 ```
 
@@ -153,7 +153,7 @@ Run the Supabase migrations to set up the `servers` table, Row Level Security (R
 
 ### 4. Start Redis
 ```bash
-docker run -d --name deployquest-redis -p 6379:6379 redis:alpine
+docker run -d --name SpawnCtl-redis -p 6379:6379 redis:alpine
 ```
 
 ### 5. Run the Project
