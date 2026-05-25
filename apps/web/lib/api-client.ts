@@ -17,6 +17,7 @@ export async function apiFetch<TResponse = unknown>(path: string, init: RequestI
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${session.access_token}`,
+      'ngrok-skip-browser-warning': 'true',
       ...init.headers,
     },
   });
