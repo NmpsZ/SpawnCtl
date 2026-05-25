@@ -3,6 +3,8 @@
 import { Activity, CheckCircle2, Cpu, Database, HardDrive, Server, Zap, AlertCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 
+import type { ServerStatus } from '@deployquest/shared';
+
 import { apiFetch } from '../../../lib/api-client';
 import { ServerStatusBadge } from '../../../components/server/ServerStatus';
 
@@ -24,7 +26,7 @@ interface ContainerInfo {
   status: string;
   game: string;
   serverId: string;
-  dbStatus?: string;
+  dbStatus?: ServerStatus;
   ports: ContainerPort[];
   created: number;
 }
