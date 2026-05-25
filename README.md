@@ -20,16 +20,6 @@ Running dedicated game servers 24/7 consumes significant resources, but friends 
 
 ---
 
-## 📸 Screenshots
-
-*(Replace the placeholder links below with actual images of your project)*
-
-| Dashboard Overview | Real-time Terminal & Logs | System Health |
-| :---: | :---: | :---: |
-| ![Dashboard](./public/screenshots/dashboard.png) | ![Terminal](./public/screenshots/terminal.png) | ![System Health](./public/screenshots/system_health.png) |
-
----
-
 ## 🏗️ Architecture
 
 DeployQuest uses a decoupled Architecture consisting of a Next.js Frontend and a Fastify Backend, connected to a local Docker Daemon and Supabase for state management.
