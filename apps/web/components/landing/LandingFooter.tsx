@@ -14,7 +14,7 @@ export function LandingFooter() {
             Powered by Next.js & Fastify
           </span>
           <a
-            href="https://github.com"
+            href="https://github.com/NmpsZ/SpawnCtl.git"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 hover:text-stone-300 transition-colors"
