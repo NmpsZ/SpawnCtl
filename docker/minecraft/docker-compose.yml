@@ -1,0 +1,16 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:java17
+    environment:
+      EULA: 'TRUE'
+      MEMORY: 1G
+      TYPE: PAPER
+      ENABLE_RCON: 'false'
+    ports:
+      - '25565'
+    volumes:
+      - minecraft-data:/data
+    restart: 'no'
+
+volumes:
+  minecraft-data:
