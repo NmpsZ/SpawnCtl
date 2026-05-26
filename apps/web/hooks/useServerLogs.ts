@@ -25,6 +25,7 @@ export function useServerLogs(serverId: string) {
       const socket = io(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000', {
         auth: { token: session.access_token },
         withCredentials: true,
+        transports: ['websocket'],
       });
 
       socketRef.current = socket;
