@@ -564,7 +564,7 @@ export async function getServerStatus(req: FastifyRequest, reply: FastifyReply) 
     ? await dockerService.inspectManagedContainer(server.container_id, server.id)
     : { containerState: null, hostPort: null };
 
-  const stats = server.container_id && server.status === 'running'
+  const stats = server.container_id && (server.status === 'running' || server.status === 'ready')
     ? await resourceService.getContainerStats(server.container_id)
     : null;
 
